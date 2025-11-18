@@ -2,7 +2,11 @@
 
 # ORS4 Net Scan
 
-Herramienta de análisis de red desarrollada en Python, pensada para técnicos, administradores y entusiastas que necesitan centralizar tareas básicas y avanzadas de diagnóstico en una sola interfaz.
+Herramienta de análisis de red desarrollada en Python, diseñada para técnicos, administradores y entusiastas que necesitan centralizar tareas de diagnóstico en una sola interfaz.  
+Permite realizar escaneos completos de dispositivos, puertos y servicios, con detección de vulnerabilidades y recopilación de información relevante del entorno.  
+Los resultados pueden exportarse en **JSON, CSV o PDF**, facilitando la documentación, auditorías y reportes.
+
+La herramienta es totalmente **portable**, no requiere instalación y puede ejecutarse desde cualquier ubicación.  
 
 [🔗 Descargar última versión](URL_DESCARGA_AQUI)
 
@@ -31,8 +35,9 @@ Es necesario tener **Nmap instalado en el sistema** para usar las siguientes fun
 - Escaneo de vulnerabilidades (NSE)
 - Ejecución de comandos Nmap personalizados (opción avanzada)
 
-> **Nota:** Nmap para Windows incluye Npcap/WinPcap, necesarios para ciertos tipos de escaneo.  
-> Se recomienda instalarlo desde el sitio oficial de Nmap.
+> **Nota:**  
+> La descarga de esta herramienta ya incluye todo lo necesario para su funcionamiento, incluyendo el binario de Nmap y las dependencias requeridas.  
+> Si deseas contar siempre con la versión más reciente de Nmap, puedes instalarla directamente desde su sitio web oficial
 
 ### 2. Conexión a Internet (obligatoria para funciones específicas)
 
@@ -41,18 +46,17 @@ Las siguientes opciones requieren acceso activo a Internet:
 - **Identificar fabricante (MAC)**  
   Consulta un servicio remoto (API) para obtener el fabricante asociado a la dirección MAC.
 - **Mostrar mi IP pública**  
-  Obtiene la IP externa a través de un servicio online.
+  Obtiene tu IP publica a través de un servicio online.
 - **Mostrar IP asociada a un dominio (DNS)**  
   Realiza una resolución DNS remota para devolver la IP del dominio indicado.
 - **Escaneo de vulnerabilidades (NSE)**  
-  Algunos scripts requieren conexión para consultar información actualizada sobre vulnerabilidades.
+  Requiere conexión para consultar información actualizada sobre vulnerabilidades.
 
 Si no hay conexión, estas funciones no podrán devolver resultados válidos.
 
 ### 3. Compatibilidad
 
 - Sistema operativo: **Windows 10/11**
-- Puede requerir ejecutar la herramienta con **permisos de administrador** para ciertos tipos de escaneo.
 - El usuario final **no necesita tener Python instalado**, ya que se distribuye en formato ejecutable (`.exe`).
 
 ---
@@ -107,7 +111,7 @@ Para obtener información actualizada sobre vulnerabilidades es **necesaria cone
 
 Permite consultar el fabricante de un dispositivo a partir de su dirección MAC:
 
-- Se envía la MAC a un servicio remoto (API) que mantiene una base de datos actualizada de fabricantes.
+- Se envía la MAC a un servicio remoto que mantiene una base de datos actualizada de fabricantes.
 - Si la dirección se encuentra registrada, devuelve el proveedor (vendor) asociado.
 - El servicio admite un número alto de consultas diarias por IP.
 
@@ -147,3 +151,80 @@ Opción pensada para usuarios avanzados:
 
 ## Deteccion de vulnerabilidades
 ![Vulnerabilidades](https://github.com/n0rs4rt/Ors4NetScan/blob/1ced2238929ca7347a381a6119023b5cbbc683ad/assets/vulnerabilidades.png)
+
+
+## 🧩 Preguntas frecuentes (FAQ)
+
+### 🔹 **1. El script no muestra correctamente los iconos o caracteres en la consola. ¿A qué se debe?**
+Esto suele ocurrir por dos motivos principales:
+
+- El script se está ejecutando como **Administrador**, y en ese modo Windows lo ejecuta con CMD el cual es una terminal obsoleta y restringe ciertos caracteres.
+- La terminal utilizada no soporta **Unicode moderno**, como ocurre con el CMD clásico o versiones antiguas.
+
+**Recomendación:** utilizar **Windows Terminal** como consola predeterminada, ya que ofrece compatibilidad completa con iconos, emojis y codificación UTF-8.  
+Opcionalmente, se puede instalar una terminal mas moderna alternativa incluida en el enlace del proyecto.
+
+##Para utilizar la terminal de windows de forma predeterminada basta con ir a la siguiente configuracion (Windows 11)
+(https://github.com/n0rs4rt/Ors4NetScan/blob/6dbe86e9b9c0c1a28decbbbcd437fed72eb3abc8/assets/terminal%20windows.png)
+
+---
+
+### 🔹 **2. Los nombres de los dispositivos (hostnames) no aparecen y son mostrados como “desconocido”.**
+Esto puede deberse a varias causas:
+
+- El router no soporta o no entrega correctamente los nombres de host.  
+- Existe un firewall o filtrado que bloquea la resolución de nombres.  
+- El escaneo se realiza por **Wi-Fi**, lo cual suele limitar la obtención de hostnames.  
+- La red no cuenta con un **servidor DHCP** que gestione y registre adecuadamente los nombres.
+
+En infraestructuras correctamente configuradas (empresas, routers profesionales, DHCP centralizado) los nombres suelen aparecer sin inconvenientes.
+
+---
+
+### 🔹 **3. El escaneo de puertos no detecta el sistema operativo.**
+La detección de sistema operativo no siempre se incluye en un escaneo general.  
+Para resultados precisos:
+
+1. Ejecutar un **escaneo específico para detección de sistema operativo**.  
+2. Luego realizar el escaneo de puertos.
+
+El reconocimiento de OS requiere un tipo particular de fingerprint que no siempre está presente en un scan completo.
+
+---
+
+### 🔹 **4. No aparecen vulnerabilidades durante el análisis. ¿Es un fallo del script?**
+No. Para identificar vulnerabilidades es necesario que el dispositivo objetivo:
+
+- Esté encendido.  
+- Tenga puertos abiertos.  
+- Responda al escaneo.  
+- No esté protegido por un firewall restrictivo.
+
+Si un dispositivo no expone puertos, no se detectará ninguna vulnerabilidad.  
+Esto es completamente normal en sistemas protegidos o redes bien configuradas.
+
+---
+
+### 🔹 **5. El escaneo por Wi-Fi muestra resultados incompletos o inconsistentes.**
+Las redes inalámbricas pueden generar interferencias, pérdida de paquetes, aislamiento de clientes o limitaciones del router.  
+Para obtener resultados más confiables se recomienda realizar los escaneos **por cable Ethernet**.
+
+---
+
+## 🛠️ Notas adicionales
+- Windows Terminal es la opción recomendada para visualizar correctamente el script.  
+- Ejecutar el script como usuario estándar, no como Administrador.  
+- En redes domésticas con routers básicos es normal que ciertos datos no se devuelvan.
+
+---
+
+## 📩 Dudas o errores
+Si se presentan problemas de visualización, resultados incompletos o errores inesperados, se puede comunicar vía mensaje directo o comentario para revisar el caso.
+
+---
+
+## 🧠 Consejos para mejores resultados
+- Priorizar escaneos por cable.  
+- Mantener Windows Terminal actualizada.  
+- Considerar las limitaciones de los routers de gama baja.  
+- Separar la detección de sistema operativo del escaneo general para obtener mayor precisión.
