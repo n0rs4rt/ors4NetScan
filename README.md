@@ -143,8 +143,6 @@ Opción pensada para usuarios avanzados:
 
 ## 🖼️ Capturas de pantalla
 
-> Reemplaza las URLs por las rutas reales de tus imágenes dentro del repositorio.
-
 ```markdown
-![Menú principal](URL_CAPTURA_MENU_AQUI)
-![Ejemplo de escaneo](URL_CAPTURA_ESCANEO_AQUI)
+![Puertos](https://github.com/n0rs4rt/Ors4NetScan/blob/1ced2238929ca7347a381a6119023b5cbbc683ad/assets/puertos.png)
+![Vulnerabilidades][(URL_CAPTURA_ESCANEO_AQUI)](https://github.com/n0rs4rt/Ors4NetScan/blob/1ced2238929ca7347a381a6119023b5cbbc683ad/assets/vulnerabilidades.png)
