@@ -164,9 +164,10 @@ Esto suele ocurrir por dos motivos principales:
 **Recomendación:** utilizar **Windows Terminal** como consola predeterminada, ya que ofrece compatibilidad completa con iconos, emojis y codificación UTF-8.  
 Opcionalmente, se puede instalar una terminal mas moderna alternativa incluida en el enlace del proyecto.
 
-##Para utilizar la terminal de windows de forma predeterminada basta con ir a la siguiente configuracion (Windows 11)
-(https://github.com/n0rs4rt/Ors4NetScan/blob/6dbe86e9b9c0c1a28decbbbcd437fed72eb3abc8/assets/terminal%20windows.png)
+##Utilizar la terminal de windows de forma predeterminada:
 
+Basta con ir a la siguiente configuracion (Windows 11)
+![Windows Terminal](https://github.com/n0rs4rt/Ors4NetScan/blob/6dbe86e9b9c0c1a28decbbbcd437fed72eb3abc8/assets/terminal%20windows.png)
 ---
 
 ### 🔹 **2. Los nombres de los dispositivos (hostnames) no aparecen y son mostrados como “desconocido”.**
