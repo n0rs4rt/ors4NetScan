@@ -166,7 +166,7 @@ Opcionalmente, se puede instalar una terminal mas moderna alternativa incluida e
 
 ## Utilizar la terminal de windows de forma predeterminada:
 
-###Basta con ir a la siguiente configuracion (Windows 11)
+Basta con ir a la siguiente configuracion (Windows 11)
 ![Windows Terminal](https://github.com/n0rs4rt/Ors4NetScan/blob/6dbe86e9b9c0c1a28decbbbcd437fed72eb3abc8/assets/terminal%20windows.png)
 ---
 
