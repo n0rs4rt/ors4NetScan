@@ -8,7 +8,7 @@ Los resultados pueden exportarse en **JSON, CSV o PDF**, facilitando la document
 
 La herramienta es totalmente **portable**, no requiere instalación y puede ejecutarse desde cualquier ubicación.  
 
-[🔗 Descargar última versión](URL_DESCARGA_AQUI)
+[ Descargar última versión](https://github.com/n0rs4rt/Ors4NetScan/releases/download/v1.2/Or4NetScan.zip)
 
 ---
 
@@ -21,7 +21,7 @@ La herramienta combina **automatización** (para tareas rápidas y frecuentes) c
 
 ---
 
-## 🔧 Requisitos y dependencias
+##  Requisitos y dependencias
 
 ORS4 Net Scan depende de algunas herramientas y servicios externos para funcionar correctamente.
 
@@ -63,7 +63,7 @@ Si no hay conexión, estas funciones no podrán devolver resultados válidos.
 
 ![Vista general de ORS4 Net Scan](https://github.com/n0rs4rt/ors4nmap/blob/f78b85a2422b94bd6026d630a8653f869dcdfb95/assets/menu-principal.png)
 
-## 🧩 Funciones principales
+##  Funciones principales
 
 A continuación se describen las opciones del menú principal de ORS4 Net Scan.
 
@@ -145,7 +145,7 @@ Opción pensada para usuarios avanzados:
 
 ---
 
-## 🖼️ Capturas de pantalla
+##  Capturas de pantalla
 ## Deteccion de Puertos
 ![Puertos](https://github.com/n0rs4rt/Ors4NetScan/blob/1ced2238929ca7347a381a6119023b5cbbc683ad/assets/puertos.png)
 
@@ -153,9 +153,9 @@ Opción pensada para usuarios avanzados:
 ![Vulnerabilidades](https://github.com/n0rs4rt/Ors4NetScan/blob/1ced2238929ca7347a381a6119023b5cbbc683ad/assets/vulnerabilidades.png)
 
 
-## 🧩 Preguntas frecuentes (FAQ)
+##  Preguntas frecuentes (FAQ)
 
-### 🔹 **1. El script no muestra correctamente los iconos o caracteres en la consola. ¿A qué se debe?**
+###  **1. El script no muestra correctamente los iconos o caracteres en la consola. ¿A qué se debe?**
 Esto suele ocurrir por dos motivos principales:
 
 - El script se está ejecutando como **Administrador**, y en ese modo Windows lo ejecuta con CMD el cual es una terminal obsoleta y restringe ciertos caracteres.
@@ -166,11 +166,11 @@ Opcionalmente, se puede instalar una terminal mas moderna alternativa incluida e
 
 ## Utilizar la terminal de windows de forma predeterminada:
 
-###Basta con ir a la siguiente configuracion (Windows 11)
+Basta con ir a la siguiente configuracion (Windows 11)
 ![Windows Terminal](https://github.com/n0rs4rt/Ors4NetScan/blob/6dbe86e9b9c0c1a28decbbbcd437fed72eb3abc8/assets/terminal%20windows.png)
 ---
 
-### 🔹 **2. Los nombres de los dispositivos (hostnames) no aparecen y son mostrados como “desconocido”.**
+###  **2. Los nombres de los dispositivos (hostnames) no aparecen y son mostrados como “desconocido”.**
 Esto puede deberse a varias causas:
 
 - El router no soporta o no entrega correctamente los nombres de host.  
@@ -182,7 +182,7 @@ En infraestructuras correctamente configuradas (empresas, routers profesionales,
 
 ---
 
-### 🔹 **3. El escaneo de puertos no detecta el sistema operativo.**
+###  **3. El escaneo de puertos no detecta el sistema operativo.**
 La detección de sistema operativo no siempre se incluye en un escaneo general.  
 Para resultados precisos:
 
@@ -193,7 +193,7 @@ El reconocimiento de OS requiere un tipo particular de fingerprint que no siempr
 
 ---
 
-### 🔹 **4. No aparecen vulnerabilidades durante el análisis. ¿Es un fallo del script?**
+###  **4. No aparecen vulnerabilidades durante el análisis. ¿Es un fallo del script?**
 No. Para identificar vulnerabilidades es necesario que el dispositivo objetivo:
 
 - Esté encendido.  
@@ -206,25 +206,25 @@ Esto es completamente normal en sistemas protegidos o redes bien configuradas.
 
 ---
 
-### 🔹 **5. El escaneo por Wi-Fi muestra resultados incompletos o inconsistentes.**
+###  **5. El escaneo por Wi-Fi muestra resultados incompletos o inconsistentes.**
 Las redes inalámbricas pueden generar interferencias, pérdida de paquetes, aislamiento de clientes o limitaciones del router.  
 Para obtener resultados más confiables se recomienda realizar los escaneos **por cable Ethernet**.
 
 ---
 
-## 🛠️ Notas adicionales
+##  Notas adicionales
 - Windows Terminal es la opción recomendada para visualizar correctamente el script.  
 - Ejecutar el script como usuario estándar, no como Administrador.  
 - En redes domésticas con routers básicos es normal que ciertos datos no se devuelvan.
 
 ---
 
-## 📩 Dudas o errores
+## Dudas o errores
 Si se presentan problemas de visualización, resultados incompletos o errores inesperados, se puede comunicar vía mensaje directo o comentario para revisar el caso.
 
 ---
 
-## 🧠 Consejos para mejores resultados
+## Consejos para mejores resultados
 - Priorizar escaneos por cable.  
 - Mantener Windows Terminal actualizada.  
 - Considerar las limitaciones de los routers de gama baja.  
